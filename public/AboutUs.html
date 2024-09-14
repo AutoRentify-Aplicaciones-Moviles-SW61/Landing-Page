@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="assets/styles/stylesAboutUs.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/gotta go fast.jpeg" alt="Icono de la aplicación">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="home-button" data-en="Home" data-es="Inicio">Home</a></li>
+                <li><a href="AboutUs.html" data-en="About Us" data-es="Sobre Nosotros">About Us</a></li>
+                <li><a href="Community.html" data-en="Community" data-es="Comunidad">Community</a></li>
+                <li><a href="Plans.html" data-en="Plans" data-es="Planes">Plans</a></li>
+                <li><a href="Contact Us.html" data-en="Contact Us" data-es="Contáctenos">Contact Us</a></li>
+                <li><a href="OurApp.html" class="our-app-button" data-en="Our App" data-es="Nuestra App">Our App</a></li>
+                <li><a href="#" class="language-switcher" onclick="switchLanguage()">EN/ES</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <br><br><br><br>
+        <h1 style="text-align: center; font-size: 4.2em;" data-en="About Us" data-es="Sobre Nosotros">About Us</h1>
+        <p style="text-align: center; font-size: 1.7em; padding: 66px;" data-en="At Autorentify, we are committed to revolutionizing the vehicle rental industry by providing a seamless and efficient platform for both renters and fleet owners. Our mission is to simplify the process of renting vehicles while maximizing convenience, transparency, and profitability for all parties involved." data-es="En Autorentify, estamos comprometidos a revolucionar la industria de alquiler de vehículos proporcionando una plataforma eficiente y sin problemas tanto para los arrendatarios como para los propietarios de flotas. Nuestra misión es simplificar el proceso de alquiler de vehículos mientras maximizamos la conveniencia, la transparencia y la rentabilidad para todas las partes involucradas.">At Autorentify, we are committed to revolutionizing the vehicle rental industry by providing a seamless and efficient platform for both renters and fleet owners. Our mission is to simplify the process of renting vehicles while maximizing convenience, transparency, and profitability for all parties involved.</p>
+    </main>
+    
+    <script>
+        let currentLanguage = 'en';
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLanguage}`);
+            });
+        }
+    </script>
+</body>
+</html>
